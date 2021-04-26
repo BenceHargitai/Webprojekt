@@ -1,0 +1,292 @@
+@font-face { font-family: Brownfamily; src: url('brown-regular.TTF'); } 
+
+.gridder{
+    height: 160px;
+    background-color:white;
+    margin-bottom: 25px;
+    width: 1000px;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:15px;
+    background-image: url(background.png);
+    color:white;
+    
+}
+.focim1{
+    font-family: 'Orbitron', sans-serif;
+    color:white;
+    position:relative;
+    font-size: 80px;
+    top:-500px;
+    width: 1800px;
+    margin: auto;
+    z-index: 2;
+    
+}
+a:active, a:hover, a:visited, a{
+    color:white;
+    text-decoration: none;
+}
+.focim2{
+    opacity: 90%;
+    background-color: #000115;
+    width: 1800px;
+    position:relative;
+    top:-608px;
+    margin: auto;
+    height: 110px;
+    z-index: 1;
+    border: 1px solid white;
+}
+.erkély{
+    margin-top: -3px;
+}
+.topper{
+    width: 100%;
+    height: 50px;
+    background-color: #000115;
+    position:fixed;
+    opacity: 90%;
+    z-index: 4;
+}
+.bal{
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+    top: 8px;
+    left: 50px;
+    font-weight:bold;
+    font-family: 'Orbitron', sans-serif;
+
+}
+hr{
+    margin:2px;
+    width: 105%;
+    margin: auto;
+    margin-left: -4px;
+}
+.jobb{
+    color: white;
+    font-weight:bold;
+    position:absolute;
+    right: 40px;
+    top:9px;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+.jobb:hover{
+    cursor: pointer;
+}
+
+.cim{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width:100%;
+    text-align: center;
+}
+.fokep img{
+    width:100%;
+    object-fit: cover;
+    height: 740px;
+    object-position: 80% 60%;
+}
+.container{
+    width: 60%;
+    margin:auto;
+}
+.kep img{
+    height:100%;
+    object-fit: cover;
+    width:100%;
+    border-top-left-radius:14px;
+    border-bottom-left-radius:14px;
+}
+body{
+    background-color: #000115;
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    color:white;
+}
+.ár{
+    padding-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.alár{
+    font-size:15px;
+    color:grey;
+    padding-bottom: 15px;
+}
+.árak{
+    padding-top: 3px;
+    padding-left: 20px;
+}
+.hely{
+    font-size: 17px;
+}
+.egyebek{
+    padding-top: 6px;
+    display:grid;
+    grid-template-columns: 15% 12% 15%;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.telszam{
+    padding-top:11px;
+
+}
+.kep{
+    width: 25%;
+    height:100%;
+    position:absolute;
+    left:0;
+}
+.infok{
+    width:75%;
+    height:100%;
+    position:absolute;
+    right:0;
+}
+.egyeb{
+    padding-left: 15px;
+}
+.gridder:hover{
+    cursor: pointer;
+    box-shadow:
+    inset 60px 0 120px rgb(134, 0, 151),  /* left magenta */
+    inset -60px 0 120px rgb(3, 28, 56); /* right cyan */
+
+}
+
+.alcim{
+    font-size: 40px;
+    color:white;
+    margin:auto;
+    text-align: center;
+    margin-top: -110px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+.form1{
+    margin: auto;
+    width: 538px;
+}
+input[type=text],input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+.elsotomb{
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+}
+.tipus, .szoba{
+    padding-right: 20px;
+}
+#ár1{
+    width: 40%;
+    margin-right: 6px;
+}
+#ár2{
+    width: 40%;
+    margin-left: 20px;
+}
+#calc{
+    margin-left: 20px;
+}
+.m2{
+    position: relative;
+    top: 40px;
+    right: -10px;
+    font-size: 20px;
+}
+.harmadik{
+    display: grid;
+    grid-template-columns: 45% 45% 10%;
+}
+
+.negyedik{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.elerh{
+    padding-right: 20px;
+}
+.semmi{
+    color:#000115;
+}
+#choose::-webkit-file-upload-button {
+    color: black;
+    display: inline-block;
+    background: white;
+    border: none;
+    padding: 7px 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 10pt;
+    margin: auto;
+    margin-right: 5px;
+    
+}
+.sendin{
+    text-align: center;
+    margin:auto;
+    width: 400px;
+    height: 30px;
+    margin-top: 40px;
+    border:1px solid white;
+    font-size: 20px;
+    margin-bottom: 300px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+.buttonholder{
+    margin:auto;
+    text-align: center;
+}
+.sendin:hover{
+    cursor: pointer;
+}
+#blah{
+    margin-top: 5px;
+    border:1px solid white;
+}
+.sendin text{
+    margin-top: 5px;
+}
+.cimblokk1{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.cimblokk2{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.cím2{
+    margin-left: 20px;
+}
+.cím4{
+    margin-left: 20px;
+}
+.elsotomb, .cimblokk1, .cimblokk2, .másodiktomb, .harmadik, .negyedik{
+    padding-bottom: 10px;
+}

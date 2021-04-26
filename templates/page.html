@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="{% static 'style.css'%} ">
+    <script src="{% static 'app.js' %}"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    {% csrf_token %} 
+    <div class="topper">
+        <div class="bal">Jókapás.hu <hr></div>
+        <div class="jobb"><a href="./felado">Ingatlan feladás <hr></a></div>
+        
+    </div>
+    <div class="cim">
+        <div class="fokep"><img src="https://i.imgur.com/33BmiHE.png" alt=""></div>
+        <div class="focim1">Találja meg álmai otthonát!</div>
+        <div class="focim2"></div>
+    </div>
+    <div class="container">
+        
+        {% for item in kontextus %}
+            
+        
+            
+        <div class="gridder">
+            <div class="kep">
+                <img src="{{item.kép.url}}" alt="">
+            </div>
+            <div class="infok">
+                <div class="árak">
+                    <div class="ár">{{item.ár}}</div>
+                    <div class="alár">{{item.méret}} m<sup>2</sup> </div>
+                </div>
+                
+                <div class="egyeb">
+                    <div class="hely">{{item.cím}}</div>
+                    <div class="egyebek">
+                        <div class="típus">{{item.tipus}}</div>
+                        <div class="szoba">{{item.szoba}} szoba</div>
+                        <div class="erkély"> {{item.erkély}} m<sup>2</sup> erkély</div>
+                    </div>
+                    <div class="telszam">Elérhetőség: {{item.elérhetőség}}</div>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+       <!-- <div class="gridder">
+            <div class="kep">
+                <img src="https://wallpaperaccess.com/full/54771.jpg" alt="">
+            </div>
+            <div class="infok">
+                <div class="árak">
+                    <div class="ár">50 Millió Forint</div>
+                    <div class="alár">600 000 Ft / m2</div>
+                </div>
+                <div class="egyeb">
+                    <div class="hely">Budafoki út 215, XI. kerület</div>
+                    <div class="egyebek">
+                        <div class="típus">Új építésű</div>
+                        <div class="szoba">3 szoba</div>
+                        <div class="erkély"> 8.23 m2 erkély</div>
+                    </div>
+                    <div class="telszam">Telefonszám: +363030303030</div>
+                </div>
+            </div>
+        </div>
+        <div class="gridder">
+            <div class="kep">
+                <img src="https://besthqwallpapers.com/Uploads/15-12-2019/116040/thumb2-tokyo-night-skyscrapers-modern-buildings-evening.jpg" alt="">
+            </div>
+            <div class="infok">
+                <div class="árak">
+                    <div class="ár">50 Millió Forint</div>
+                    <div class="alár">600 000 Ft / m2</div>
+                </div>
+                <div class="egyeb">
+                    <div class="hely">Budafoki út 215, XI. kerület</div>
+                    <div class="egyebek">
+                        <div class="típus">Új építésű</div>
+                        <div class="szoba">3 szoba</div>
+                        <div class="erkély"> 8.23 m2 erkély</div>
+                    </div>
+                    <div class="telszam">Telefonszám: +363030303030</div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>

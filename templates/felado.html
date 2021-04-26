@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="{% static 'style.css'%} ">
+    <script src="{% static 'app.js' %}"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div class="topper">
+        <div class="bal">Jókapás.hu <hr></div>
+        <div class="jobb"><a href="../">Ingatlan keresés <hr></a></div>
+    </div>
+    <div class="cim">
+        <div class="fokep"><img src="https://i.imgur.com/33BmiHE.png" alt=""></div>
+        <div class="focim1">Találja meg álmai otthonát!</div>
+        <div class="focim2"></div>
+    </div>
+        <div class="alcim">Adja fel hirdetését</div>
+        <div class="form1">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="elsotomb">
+                <div class="tipus">Ingatlan típusa
+                    <select id="haz" name="tipus"> <!-- tipus-->
+                        <option value="Új építésű">új építésű</option>
+                        <option value="Régi építésű">régi építésű</option>
+                    </select>
+                </div>
+                <div class="méret">Méret
+                    <input type="number" id="meret" name="meret"></div><!-- meret-->
+                <div class="m2"> m<sup>2</sup></div>
+                </div>
+                <div class="cimblokk1">
+                    <div class="cím1">Irányítószám
+                    <input type="text" name="iszam" id="iszam"></div><!-- iszam-->
+                    <div class="cím2">Település
+                    <input type="text" name="telep" id="telep"></div><!-- telep-->
+                </div>
+                <div class="cimblokk2">
+                    <div class="cím3">Utca
+                    <input type="text" name="utca" id="utca"></div><!-- utca-->
+                    <div class="cím4">Házszám
+                    <input type="text" name="hazszam" id="hazszam"></div><!-- hazszam-->
+                </div>
+
+                <div class="másodiktomb">
+                    <div class="ár1">Ár</div>
+                    <input type="number" id="ár1" name="ar1">Millió  <!-- ar1-->
+                    <input type="number" id="ár2" name="ar2"> Ezer <!-- ar2-->
+                    <span id="calc">   </span>
+                </div>
+                <div class="harmadik">
+                    <div class="szoba">Szobák száma
+                        <input type="number" name="szoba" id="szoba"></div> <!-- szoba-->
+                    <div class="erkely">Erkély mérete
+                        <input type="number" name="erkely" id="erkely"> </div> <!-- erkely-->
+                    <div class="m2"> m<sup>2</sup></div>
+                </div>
+                <div class="negyedik">
+                    <div class="elerh">Elérhetőség
+                    <select id="elerh" name="elerhetoseg"><!-- elerhetoseg-->
+                        <option value="email" id="email">Email cím</option>
+                        <option value="telefon" id="telefon">Telefonszám</option>
+                    </select></div>
+                    <div class="semmi">---- <input type="text" id="elerheto" name="eleradat"> </div><!-- eleradat-->
+                </div>
+                <div> Kép feltöltése </div>
+
+                <input type="file" name="kep" id="choose" onchange="readURL(this);" style="width: 300px;">  <!-- kep-->
+                <img id="blah" src="#" />
+                <div class="buttonholder"><button method="submit" class="sendin" onclick="feladas()">Feladás</button></div>
+            </form>
+        </div>
+        
+</body>
+</html>
