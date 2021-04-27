@@ -12,7 +12,8 @@ class Ingatlan(models.Model):
     árm2 = models.CharField(max_length=30)
     szoba = models.CharField(max_length=30)
     erkély = models.CharField(max_length=30)
-    elérhetőség = models.CharField(max_length=30)
+    elértípus = models.CharField(max_length=30)
+    elérhetőség = models.CharField(max_length=50)
     kép = models.ImageField(upload_to='pics')
     
 
@@ -23,20 +24,24 @@ class Ingatlan(models.Model):
     def __str__(self):
         return self.cím
 
+   
+
     def feladas(post):
         print("POST request érkezet!!! :)")
         teljesár = 0
-        if (post['ar1'] == "0"):
+        if (post['ar1'] == "0" or post['ar1'] == ""):
             teljesár = f"{post['ar2']} Ezer"
-        if (post['ar2'] == "0"):
+        if (post['ar2'] == "0" or post['ar2'] == ""):
             teljesár = f"{post['ar1']} Millió "
-        if (post['ar1'] != "0" and post['ar2'] != "0"):
+        if (post['ar1'] != "0" and post['ar2'] != "0" and post['ar1'] != "" and post['ar2'] != ""):
             teljesár = f"{post['ar1']} Millió {post['ar2']} Ezer"
-        if (post['tipus'] == "" or post['meret'] == "" or post['iszam'] =="" or post['telep']=="" or post['hazszam'] =="" or post['szoba'] == "" or post['erkely'] =="" or post['eleradat']=="" or post['kep']==""):
+        if (post['tipus'] == "" or post['meret'] == "" or post['iszam'] =="" or post['telep']=="" or post['hazszam'] =="" or post['szoba'] == "" or post['erkely'] =="" or post['eleradat']=="" or post['kep']=="" or (post['ar1']=="" and post['ar2']=="") or (post['ar1']=="0" and post['ar2']=="0")):
             print("Sikertelen kísérlet")
             return False
-        ár2 = (int(post['ar1']) * 1000000 + int(post['ar2'])*1000 )/ int(post['meret'])
-        Ingatlan.objects.create(tipus = post['tipus'], méret =post['meret'], cím = f"{post['iszam']} {post['telep']}, {post['utca']} {post['hazszam']}", ár = teljesár, árm2 =  ár2, szoba=post['szoba'],erkély=post['erkely'], elérhetőség=post['eleradat'], kép =f"pics/{post['kep']}")
+        
+        Ingatlan.objects.create(tipus = post['tipus'], méret =post['meret'], cím = f"{post['iszam']} {post['telep']}, {post['utca']} {post['hazszam']}", ár = teljesár, árm2 =  0, szoba=post['szoba'],erkély=post['erkely'], elértípus = post['elerhetoseg'], elérhetőség=post['eleradat'], kép =f"pics/{post['kep']}")
+        
+        
         return True
 
     

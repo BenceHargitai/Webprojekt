@@ -27,6 +27,7 @@
         <div class="focim1">Találja meg álmai otthonát!</div>
         <div class="focim2"></div>
     </div>
+    <div class="alcim" id="alcim2">Keressen az alábbiakból</div>
     <div class="container">
         
         {% for item in kontextus %}
@@ -39,8 +40,8 @@
             </div>
             <div class="infok">
                 <div class="árak">
-                    <div class="ár">{{item.ár}}</div>
-                    <div class="alár">{{item.méret}} m<sup>2</sup> </div>
+                    <div class="ár">{{item.ár}} Forint</div>
+                    <div class="ár kettő"> Méret: {{item.méret}} m<sup>2</sup></div>
                 </div>
                 
                 <div class="egyeb">
@@ -50,7 +51,7 @@
                         <div class="szoba">{{item.szoba}} szoba</div>
                         <div class="erkély"> {{item.erkély}} m<sup>2</sup> erkély</div>
                     </div>
-                    <div class="telszam">Elérhetőség: {{item.elérhetőség}}</div>
+                    <div class="telszam">{{item.elértípus}}: {{item.elérhetőség}}</div>
                     
                 </div>
             </div>

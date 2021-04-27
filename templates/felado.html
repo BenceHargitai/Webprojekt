@@ -38,7 +38,7 @@
                     </select>
                 </div>
                 <div class="méret">Méret
-                    <input type="number" id="meret" name="meret"></div><!-- meret-->
+                    <input type="number" id="meret" name="meret" oninput="Calculator()"></div><!-- meret-->
                 <div class="m2"> m<sup>2</sup></div>
                 </div>
                 <div class="cimblokk1">
@@ -56,9 +56,9 @@
 
                 <div class="másodiktomb">
                     <div class="ár1">Ár</div>
-                    <input type="number" id="ár1" name="ar1">Millió  <!-- ar1-->
-                    <input type="number" id="ár2" name="ar2"> Ezer <!-- ar2-->
-                    <span id="calc">   </span>
+                    <input type="number" id="ár1" name="ar1" oninput="Calculator()" >Millió  <!-- ar1-->
+                    <input type="number" id="ár2" name="ar2" oninput="Calculator()"> Ezer <!-- ar2-->
+                    <div id="calc"> </div>
                 </div>
                 <div class="harmadik">
                     <div class="szoba">Szobák száma
@@ -70,8 +70,8 @@
                 <div class="negyedik">
                     <div class="elerh">Elérhetőség
                     <select id="elerh" name="elerhetoseg"><!-- elerhetoseg-->
-                        <option value="email" id="email">Email cím</option>
-                        <option value="telefon" id="telefon">Telefonszám</option>
+                        <option value="Email cím" id="email">Email cím</option>
+                        <option value="Telefonszám" id="telefon">Telefonszám</option>
                     </select></div>
                     <div class="semmi">---- <input type="text" id="elerheto" name="eleradat"> </div><!-- eleradat-->
                 </div>
@@ -80,6 +80,7 @@
                 <input type="file" name="kep" id="choose" onchange="readURL(this);" style="width: 300px;">  <!-- kep-->
                 <img id="blah" src="#" />
                 <div class="buttonholder"><button method="submit" class="sendin" onclick="feladas()">Feladás</button></div>
+                <input type="number" id="m2ar" name="m2ar" ><!-- ar1-->
             </form>
         </div>
         
